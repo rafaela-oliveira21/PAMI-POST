@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Postagens.Models
+namespace Postagens.Services
 {
-    internal class PostModels
+    class PostService
     {
-
     }
 }

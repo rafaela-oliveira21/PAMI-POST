@@ -8,25 +8,20 @@ using System.Windows.Input;
 
 namespace Postagens.ViewModels
 {
-    //Toda view model é um objeto observavel
-    public partial class PostViewModels : ObservableObject
+    public partial class PostViewModel : ObservableObject
     {
         [ObservableProperty]
         private string titulo;
 
         [ObservableProperty]
-        public string corpo;
+        private string corpo;
 
-        public ICommand DisplayPostsCommand {  get; private set; }
-
-        public PostViewModels() 
-        {
-            Command command = new Command(DisplayPosts);
-            DisplayPostsCommand = command;
+        public ICommand DisplayPostsCommand { get; private set; }
+        public PostViewModel() {
+        
+            DisplayPostsCommand = new Command(DisplayPosts);
         }
 
-        //Método com letra maiuscula
-        //Atributi com letra minuscula
         public void DisplayPosts()
         {
             Titulo = Titulo + "A";

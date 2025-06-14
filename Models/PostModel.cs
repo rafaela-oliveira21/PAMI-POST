@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Postagens.Models
 {
-    internal class PostModels
+    public class PostModel
     {
-
+        public int UserId;
+        public int Id;
+        public string Title;
+        public string Body;
     }
 }
